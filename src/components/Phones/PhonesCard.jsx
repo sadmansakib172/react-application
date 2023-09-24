@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const PhonesCard = ({ phone }) => {
@@ -28,12 +29,14 @@ const PhonesCard = ({ phone }) => {
                     </p>
                 </div>
                 <div className="p-6 pt-0">
-                    <button
-                        className="block w-full select-none rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  <Link to={`/phones/${id}`}>
+                  <button
+                        className="block bg-gray-300 w-full select-none rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                         type="button"
                     >
                         See Details
                     </button>
+                  </Link>
                 </div>
             </div>
         </div>
